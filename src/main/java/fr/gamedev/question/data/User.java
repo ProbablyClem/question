@@ -27,7 +27,7 @@ public class User {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(final long id) {
 		this.id = id;
 	}
 
@@ -41,7 +41,7 @@ public class User {
 	/**
 	 * @param login the login to set
 	 */
-	public void setLogin(String login) {
+	public void setLogin(final String login) {
 		this.login = login;
 	}
 
@@ -55,7 +55,7 @@ public class User {
 	/**
 	 * @param lastName the lastName to set
 	 */
-	public void setLastName(String lastName) {
+	public void setLastName(final String lastName) {
 		this.lastName = lastName;
 	}
 

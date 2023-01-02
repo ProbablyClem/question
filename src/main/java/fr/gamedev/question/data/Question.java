@@ -10,7 +10,7 @@ import javax.persistence.Id;
  */
 @Entity
 public class Question {
-	
+
 	@GeneratedValue
 	@Id
 	private long id;
@@ -24,7 +24,7 @@ public class Question {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(final long id) {
 		this.id = id;
 	}
 	/**
@@ -36,7 +36,7 @@ public class Question {
 	/**
 	 * @param content the content to set
 	 */
-	public void setContent(String content) {
+	public void setContent(final String content) {
 		this.content = content;
 	}
 

@@ -11,16 +11,16 @@ import javax.persistence.OneToOne;
  */
 @Entity
 public class Answer {
-	
+
 	@GeneratedValue
 	@Id
 	private long id;
-	
+
 	@OneToOne
 	private Question question;
 	private Boolean correctAnswer;
-	
-	
+
+
 	/**
 	 * @return the id
 	 */
@@ -30,7 +30,7 @@ public class Answer {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(long final id) {
 		this.id = id;
 	}
 	/**
@@ -57,5 +57,5 @@ public class Answer {
 	public void setCorrectAnswer(Boolean correctAnswer) {
 		this.correctAnswer = correctAnswer;
 	}
-	
+
 }

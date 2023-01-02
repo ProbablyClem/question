@@ -14,7 +14,7 @@ public class Launcher {
     /**
      * @param args command line params
      */
-    public static void main(final String[] args) {
+    private static void main(final String[] args) {
         SpringApplication.run(Launcher.class, args);
     }
 
