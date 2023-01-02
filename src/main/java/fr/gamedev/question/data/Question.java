@@ -10,10 +10,12 @@ import javax.persistence.Id;
  */
 @Entity
 public class Question {
-
+	/**id.*/
 	@GeneratedValue
 	@Id
 	private long id;
+
+	/**content.*/
 	private String content;
 	/**
 	 * @return the id
@@ -22,10 +24,10 @@ public class Question {
 		return id;
 	}
 	/**
-	 * @param id the id to set
+	 * @param newId the id to set
 	 */
-	public void setId(final long id) {
-		this.id = id;
+	public void setId(final long newId) {
+		this.id = newId;
 	}
 	/**
 	 * @return the content
@@ -34,10 +36,10 @@ public class Question {
 		return content;
 	}
 	/**
-	 * @param content the content to set
+	 * @param newContent the content to set
 	 */
-	public void setContent(final String content) {
-		this.content = content;
+	public void setContent(final String newContent) {
+		this.content = newContent;
 	}
 
 }

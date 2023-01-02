@@ -8,22 +8,22 @@ package fr.gamedev.question.greeting;
  *
  */
 public class Greeting {
+/**id.*/
+private final long id;
+/**content.*/
+private final String content;
 
-	private final long id;
-	private final String content;
+public Greeting(final long newId, final String newContent) {
+this.id = newId;
+this.content = newContent;
+}
 
-	public Greeting(final long id, final String content) {
-		this.id = id;
-		this.content = content;
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public String getContent() {
-		return content;
-	}
-
-
+/**@return id*/
+public long getId() {
+return id;
+}
+/**@return content*/
+public String getContent() {
+return content;
+}
 }

@@ -11,10 +11,15 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
+	/**id.*/
 	@GeneratedValue
 	@Id
 	private long id;
+
+	/**login.*/
 	private String login;
+
+	/**lastName.*/
 	private String lastName;
 
 	/**
@@ -25,10 +30,10 @@ public class User {
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param newId the id to set
 	 */
-	public void setId(final long id) {
-		this.id = id;
+	public void setId(final long newId) {
+		this.id = newId;
 	}
 
 	/**
@@ -39,10 +44,10 @@ public class User {
 	}
 
 	/**
-	 * @param login the login to set
+	 * @param newLogin the login to set
 	 */
-	public void setLogin(final String login) {
-		this.login = login;
+	public void setLogin(final String newLogin) {
+		this.login = newLogin;
 	}
 
 	/**
@@ -53,10 +58,10 @@ public class User {
 	}
 
 	/**
-	 * @param lastName the lastName to set
+	 * @param newLastName the lastName to set
 	 */
-	public void setLastName(final String lastName) {
-		this.lastName = lastName;
+	public void setLastName(final String newLastName) {
+		this.lastName = newLastName;
 	}
 
 }
