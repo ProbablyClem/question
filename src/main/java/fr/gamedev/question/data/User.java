@@ -11,57 +11,57 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
-	/**id.*/
-	@GeneratedValue
-	@Id
-	private long id;
+    /**id.*/
+    @GeneratedValue
+    @Id
+    private long id;
 
-	/**login.*/
-	private String login;
+    /**login.*/
+    private String login;
 
-	/**lastName.*/
-	private String lastName;
+    /**lastName.*/
+    private String lastName;
 
-	/**
-	 * @return the id
-	 */
-	public long getId() {
-		return id;
-	}
+    /**
+     * @return the id
+     */
+    public long getId() {
+        return id;
+    }
 
-	/**
-	 * @param newId the id to set
-	 */
-	public void setId(final long newId) {
-		this.id = newId;
-	}
+    /**
+     * @param newId the id to set
+     */
+    public void setId(final long newId) {
+        this.id = newId;
+    }
 
-	/**
-	 * @return the login
-	 */
-	public String getLogin() {
-		return login;
-	}
+    /**
+     * @return the login
+     */
+    public String getLogin() {
+        return login;
+    }
 
-	/**
-	 * @param newLogin the login to set
-	 */
-	public void setLogin(final String newLogin) {
-		this.login = newLogin;
-	}
+    /**
+     * @param newLogin the login to set
+     */
+    public void setLogin(final String newLogin) {
+        this.login = newLogin;
+    }
 
-	/**
-	 * @return the lastName
-	 */
-	public String getLastName() {
-		return lastName;
-	}
+    /**
+     * @return the lastName
+     */
+    public String getLastName() {
+        return lastName;
+        }
 
-	/**
-	 * @param newLastName the lastName to set
-	 */
-	public void setLastName(final String newLastName) {
-		this.lastName = newLastName;
-	}
+    /**
+     * @param newLastName the lastName to set
+     */
+    public void setLastName(final String newLastName) {
+        this.lastName = newLastName;
+    }
 
 }
