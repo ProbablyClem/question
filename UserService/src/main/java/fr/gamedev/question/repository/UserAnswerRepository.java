@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import fr.gamedev.question.data.Question;
 import fr.gamedev.question.data.User;
 import fr.gamedev.question.data.UserAnswer;
 
@@ -19,7 +18,7 @@ import fr.gamedev.question.data.UserAnswer;
 public interface UserAnswerRepository extends PagingAndSortingRepository<UserAnswer, Long> {
 
     Optional<UserAnswer> findTopByAnswerQuestionAndUserAndPointsNotNullAndPointsIsGreaterThanOrderByPoints(
-            Question question, User user, int greaterThan);
+            Long questionId, User user, int greaterThan);
 
     /*@Query("SELECT ua.answer.question FROM UserAnswer ua " + "WHERE ua.points IS NULL "
             + "and ua.user.login = :userLogin " + "and ROWNUM = 1 ")*/

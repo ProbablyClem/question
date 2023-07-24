@@ -26,8 +26,9 @@ public class UserAnswer {
     @ManyToOne
     private User user;
     /** The correct answer (linked to the question). */
-    @ManyToOne
-    private Answer answer;
+
+    //Many to one
+    private Long answerId;
     /** Points earn by user for this answer. */
     private Integer points;
 
@@ -73,18 +74,11 @@ public class UserAnswer {
         this.points = newPoints;
     }
 
-    /**
-     * @return the answer
-     */
-    public Answer getAnswer() {
-        return answer;
+    public Long getAnswerId() {
+        return answerId;
     }
 
-    /**
-     * @param theAnswer the answer to set
-     */
-    public void setAnswer(final Answer theAnswer) {
-        this.answer = theAnswer;
+    public void setAnswerId(Long answerId) {
+        this.answerId = answerId;
     }
-
 }
