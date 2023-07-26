@@ -1,18 +1,17 @@
 package fr.gamedev.question.data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
+import org.springframework.hateoas.Links;
+import org.springframework.hateoas.RepresentationModel;
 
 /**
  * @author djer1
  */
 @Entity
-public class UserAnswer {
+public class UserAnswer extends RepresentationModel<UserAnswer> {
 
     /** id. */
     @GeneratedValue(generator = "seq_gen_userAnswer")
@@ -28,10 +27,11 @@ public class UserAnswer {
     /** The correct answer (linked to the question). */
 
     //Many to one
-    private Long answerId;
+    private long answerId;
     /** Points earn by user for this answer. */
     private Integer points;
 
+    public UserAnswer(){}
     /**
      * @return the id
      */
@@ -74,11 +74,11 @@ public class UserAnswer {
         this.points = newPoints;
     }
 
-    public Long getAnswerId() {
+    public void setAnswerId(long answerId) {
+        this.answerId = answerId;
+    }
+    public long getAnswerId() {
         return answerId;
     }
 
-    public void setAnswerId(Long answerId) {
-        this.answerId = answerId;
-    }
 }

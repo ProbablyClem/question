@@ -7,13 +7,14 @@ import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
+import org.springframework.hateoas.RepresentationModel;
 
 /**
  * @author djer1
  *
  */
 @Entity
-public class Tag {
+public class Tag extends RepresentationModel<Tag> {
 
     /** id.*/
     @GeneratedValue(generator = "seq_gen_tag")

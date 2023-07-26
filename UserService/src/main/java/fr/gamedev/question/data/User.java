@@ -1,5 +1,7 @@
 package fr.gamedev.question.data;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,7 +11,7 @@ import javax.persistence.Id;
  *
  */
 @Entity
-public class User {
+public class User extends RepresentationModel<User> {
 
     /**id.*/
     @GeneratedValue

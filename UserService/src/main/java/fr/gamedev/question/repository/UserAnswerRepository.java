@@ -17,7 +17,7 @@ import fr.gamedev.question.data.UserAnswer;
 @RepositoryRestResource(collectionResourceRel = "userAnswer", path = "userAnswer")
 public interface UserAnswerRepository extends PagingAndSortingRepository<UserAnswer, Long> {
 
-    Optional<UserAnswer> findTopByAnswerQuestionAndUserAndPointsNotNullAndPointsIsGreaterThanOrderByPoints(
+    Optional<UserAnswer> findTopByAnswerIdAndUserAndPointsNotNullAndPointsIsGreaterThanOrderByPoints(
             Long questionId, User user, int greaterThan);
 
     /*@Query("SELECT ua.answer.question FROM UserAnswer ua " + "WHERE ua.points IS NULL "
@@ -26,5 +26,10 @@ public interface UserAnswerRepository extends PagingAndSortingRepository<UserAns
 
     @Query("SELECT ua FROM UserAnswer ua " + "WHERE ua.points IS NULL " + "and ua.user.login = :userLogin ")
     List<UserAnswer> findAskedQuestionsByUserId(String userLogin);
+
+    UserAnswer findUserAnswerByUserAndPointsIsNull(User user);
+
+    UserAnswer findUserAnswerByUserAndAnswerId(User user, Long answerId);
+
 
 }

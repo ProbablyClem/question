@@ -7,13 +7,14 @@ import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
+import org.springframework.hateoas.RepresentationModel;
 
 /**
  * @author djer1
  *
  */
 @Entity
-public class Category {
+public class Category extends RepresentationModel<Category> {
 
     /** id.*/
     @GeneratedValue(generator = "seq_gen_category")
